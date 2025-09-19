@@ -4,12 +4,11 @@ import { useState } from "react";
 export const Toggle = () => {
   const [display, setDisplay] = useState(true);
   const hid = () => {
-    if (display == true) {
-      setDisplay(false);
-    } else {
-      setDisplay(true);
+  
+      setDisplay(!display);
+   
     }
-  };
+  
   return (
     <>
       {display ? <h1>this is me</h1> : null}
