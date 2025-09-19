@@ -1,6 +1,8 @@
 
 import './App.css'
 import Counter from './Counter'
+import { Toggle } from './Toggle'
+
 
 function App() {
   
@@ -8,7 +10,19 @@ function App() {
   return (
     <>
      <h1>sugat </h1>
-   <Counter />
+
+<Toggle />
+
+
+
+
+
+
+
+
+
+   {/* <Counter /> */}
+  
     </>
   )
 }

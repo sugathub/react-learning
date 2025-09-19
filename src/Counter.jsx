@@ -23,7 +23,8 @@ const Counter = () => {
 
   return (
     <><h1>{counter}</h1>
-    <button onClick={add}>+</button><button onClick={sub}>-</button>
+   <button onClick={sub}>-</button>
+    <button onClick={add}>+</button>
 
     <h1>{name}</h1>
     <input type="text" value={name}   onChange={nameChange} placeholder='Enter Name' />
