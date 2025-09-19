@@ -10,9 +10,13 @@ export const Toggle = () => {
     }
   
   return (
-    <>
-      {display ? <h1>this is me</h1> : null}
-      <button onClick={hid}>visible</button>
+    <><h1>
+        Informaction
+
+    </h1>
+   
+      {display ?  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iusto culpa ducimus ullam blanditiis odio soluta architecto, laudantium nesciunt corporis aperiam delectus porro enim temporibus quisquam sint repellat dolor. Asperiores.</p> : null}
+      <button onClick={hid}>Delete</button>
     </>
   );
 };
