@@ -1,7 +1,8 @@
 
 import './App.css'
 import Counter from './Counter'
-import { Toggle } from './Toggle'
+import { Hidd } from './Hidd'
+
 
 
 function App() {
@@ -11,8 +12,7 @@ function App() {
     <>
      {/* <h1>sugat </h1> */}
 
-<Toggle />
-
+<Hidd />
 
 
 
