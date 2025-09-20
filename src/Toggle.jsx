@@ -2,33 +2,39 @@ import React from "react";
 import { useState } from "react";
 
 export const Toggle = () => {
-  const [display, setDisplay] = useState(true);
-  const hid = () => {
-    setDisplay(!display);
-  };
-  const [name,setName] = useState("delete");
 
-  const changeName =()=>{
-    if(name == "delete"){
-        setName("View");
-    }else{
-        setName("delete");
+
+
+
+  const [display, setDisplay] = useState(0);
+
+
+  const next = () => {
+    if (display < 5) {
+      setDisplay(display + 1);
     }
   }
+  const pre = () => {
+    if (display > 0) {
+      setDisplay(display - 1);
+    }
+  }
+
 
   return (
     <>
       <h1>Informaction</h1>
 
-      {display ? (
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iusto
-          culpa ducimus ullam blanditiis odio soluta architecto, laudantium
-          nesciunt corporis aperiam delectus porro enim temporibus quisquam sint
-          repellat dolor. Asperiores.
-        </p>
-      ) : null}
-      <button onClick={()=>{hid(), changeName()}} >{name}</button>
+      {display ==0?<p>count 0</p>
+:display ==1?<p>ok</p>  
+:display ==2?<p>jio</p>   
+:display ==3?<p>idea</p> 
+:display ==4?<p>atell</p> :null
+
+
+}
+      <button onClick={next} >Next</button>
+      <button onClick={pre}>pre</button>
     </>
   );
 };
