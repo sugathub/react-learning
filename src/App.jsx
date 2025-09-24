@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-     <User student={ok}/>
+     <User student={ok} style={{color:"blue"}}><h1>okook</h1></User>
 
       <Hidd />
 
