@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export const User = ({student}) => {
+export const User = ({student ="okok"}) => {
+  const [name,setName]=useState("no name");
+ 
   return (
     <>
-    <h1>{student.name}{student.age}</h1>
+    <button onClick={() => student(name)}>jnjn</button>
     
     </>
   )

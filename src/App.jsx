@@ -9,14 +9,13 @@ import { User } from './User'
 function App() {
 
 
-  let student ={
-    name:"sugat",
-    age:21,
-  }
+ const ok = (name) =>{
+  alert(name);
+ }
 
   return (
     <>
-     <User student={student}/>
+     <User student={ok}/>
 
       <Hidd />
 
