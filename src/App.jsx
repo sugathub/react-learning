@@ -2,27 +2,30 @@
 import './App.css'
 
 import { Hidd } from './Hidd'
+import { User } from './User'
 
 
 
 function App() {
-  
+
+
+  let student ={
+    name:"sugat",
+    age:21,
+  }
 
   return (
     <>
-     {/* <h1>sugat </h1> */}
+     <User student={student}/>
 
-<Hidd />
-
-
+      <Hidd />
 
 
 
 
 
+      {/* <Counter /> */}
 
-   {/* <Counter /> */}
-  
     </>
   )
 }

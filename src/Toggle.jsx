@@ -23,8 +23,8 @@ export const Toggle = () => {
 
   return (
     <>
-      <h1>Informaction</h1>
 
+      <h1>Informaction</h1>
       {display ==0?<p>count 0</p>
 :display ==1?<p>ok</p>  
 :display ==2?<p>jio</p>   
