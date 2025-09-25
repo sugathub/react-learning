@@ -19,11 +19,11 @@ export const Hidd = () => {
             setName("Clear all");
         }
     }
-        return (
-            <>
+    return (
+        <>
 
-               {dispaly?<Toggle />:null}
-                <button onClick={() => { dis(), changeName() }}>{name}</button>
-            </>
-        )
-    }
+            {dispaly ? <Toggle /> : null}
+            <button onClick={() => { dis(), changeName() }}>{name}</button>
+        </>
+    )
+}

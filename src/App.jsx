@@ -1,28 +1,30 @@
 
 import './App.css'
-import Counter from './Counter'
+
 import { Hidd } from './Hidd'
+import { User } from './User'
 
 
 
 function App() {
-  
+
+
+ const ok = (name) =>{
+  alert(name);
+ }
 
   return (
     <>
-     {/* <h1>sugat </h1> */}
+     <User student={ok} style={{color:"blue"}}><h1>okook</h1></User>
 
-<Hidd />
-
-
+      <Hidd />
 
 
 
 
 
+      {/* <Counter /> */}
 
-   {/* <Counter /> */}
-  
     </>
   )
 }
