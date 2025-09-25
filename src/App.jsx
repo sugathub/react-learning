@@ -1,6 +1,7 @@
 
 import './App.css'
-import { Live } from './Live'
+import { Controller } from './Controller'
+
 
 
 
@@ -9,11 +10,13 @@ import { Live } from './Live'
 function App() {
 
 
- 
+
 
   return (
     <>
-  <Live />
+      <h1>Controller Component</h1>
+
+      <Controller />
     </>
   )
 }
