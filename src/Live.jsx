@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export const Live = () => {
 
     const [name,setName] =useState();
-const chan = (value)=>{
+const chan = (event)=>{
 setName(event.target.value)
 }
 
@@ -17,6 +17,7 @@ setName(event.target.value)
         <h3>{name}</h3>
 
       <input type="text" placeholder='Eneter Text' value={name}  onChange={chan}/>
+      <button onClick={()=>{setName("")}}>clear</button>
 
     </form>
     
