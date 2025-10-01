@@ -1,22 +1,14 @@
 
 import './App.css'
-import { CheckBoxs } from './CheckBoxs'
-import { Controller } from './Controller'
-
-
-
-
+import RedioBox from './RedioBox'
 
 
 function App() {
 
-
-
-
   return (
     <>
-     <CheckBoxs />
-
+  
+<RedioBox />
      
     </>
   )
