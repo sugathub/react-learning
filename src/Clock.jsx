@@ -7,8 +7,7 @@ useEffect(()=>{
 
   setInterval(()=>{
     setTime(new Date().toLocaleTimeString());
-  }
-  ,1000)
+  } ,1000)
 },[])
     
       return (
@@ -18,17 +17,15 @@ useEffect(()=>{
    <br />
   
   
-
-  <div style={{    height:" 36px",
+<div style={{    height:" 36px",
     backgroundColor: "black",
-    color: "{green}",
-    width: "100px",
+    color: colorClock,
+    width: "190px",
     textAlign: "center",}}>
+<h1>{time}</h1>
 
-{time}
 
   </div>
-   
    </>
   )
 }

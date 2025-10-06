@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Clock from './Clock';
 
 const ColorClock = () => {
-     const [colorClock,setColorClock]=useState("balck");
+     const [colorClock,setColorClock]=useState("white");
     
         const changeColor= (event)=>{
     setColorClock(event.target.value);}
@@ -10,13 +10,13 @@ const ColorClock = () => {
     
     <>
      <select onChange={changeColor} name="color" id="color">
-    <option value="read">read</option>
+    <option value="#fc0015ff">read</option>
     <option value="green">green</option>
-    <option value="black">black</option>
+    <option value="white">white</option>
     <option value="yellow">yellow</option>
   </select>
   <Clock colorClock ={colorClock}/>
-    
+  
     </>
   )
 }
