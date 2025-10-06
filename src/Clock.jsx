@@ -21,7 +21,7 @@ useEffect(()=>{
 
   <div style={{    height:" 36px",
     backgroundColor: "black",
-    color: "green",
+    color: "{green}",
     width: "100px",
     textAlign: "center",}}>
 
