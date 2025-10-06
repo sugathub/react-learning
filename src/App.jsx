@@ -1,46 +1,23 @@
 
-import './App.css'
-import User from './User'
+// import './App.css'
+
+import ColorClock from "./ColorClock"
+
+
+
 
 
 
 
 function App() {
 
-  const student = [
-    {
-      id: 1,
-     name: "sugat",
-      age: 66,
 
-
-    },
-    {
-      id: 2,
-       name: "kaka",
-      age: 67,
-
-    },
-    {
-      id: 3,
-      name: "kaku",
-      age: 54,
-
-    }
-  ]
 
   return (
     <>
 
-{
-
-student.map((user) =>(
-      <div key={user.id}>
-        <User name={user} age={user.age} id={user.id} />
-      </div>
-      ))
-
-}
+ <h1>Default  Props In React JS</h1>
+<ColorClock />
 
 
     </>
