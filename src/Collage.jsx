@@ -1,4 +1,5 @@
 import React from 'react'
+import { Student } from './Student'
 
 export const Collage = ({ collage }) => {
   return (
@@ -21,8 +22,7 @@ export const Collage = ({ collage }) => {
         <h2>Collage Name : {collage.name}</h2>
         <ul>
           <li>Rancking : {collage.Rank}</li> </ul>
-          <h3>Student</h3>
-<ul><li >Name :{collage.student.name} - age{collage.student.age} </li></ul>
+         <Student student={collage.student}/>
             
           
        
