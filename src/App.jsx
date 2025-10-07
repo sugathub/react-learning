@@ -13,28 +13,28 @@ function App() {
     {
       name: "IIMA",
       Rank: "428",
-      student: {
-        name: "sugat",
-        age: "76",
-      }
+      student: [
+       { name: "sugat"},
+       { age: "76"},
+      ]
 
     },
     {
       name: "IIT",
       Rank: "129",
-      student: {
-        name: "JAY",
-        age: "66",
-      }
+      student: [
+        {name: "JAY"},
+        {age: "66"},
+      ]
 
     },
     {
       name: "IIMC",
       Rank: "1448",
-      student: {
-        name: "JAKE",
-        age: "34",
-      }
+      student: [
+        {name: "JAKE"},
+        {age: "34"},
+      ]
 
     },
 
