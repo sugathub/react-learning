@@ -1,9 +1,7 @@
 
 // import './App.css'
 
-import ColorClock from "./ColorClock"
-
-
+import { Collage } from "./Collage";
 
 
 
@@ -11,13 +9,50 @@ import ColorClock from "./ColorClock"
 
 function App() {
 
+  const collageData = [
+    {
+      name: "IIMA",
+      Rank: "428",
+      student: {
+        name: "sugat",
+        age: "76",
+      }
+
+    },
+    {
+      name: "IIT",
+      Rank: "129",
+      student: {
+        name: "JAY",
+        age: "66",
+      }
+
+    },
+    {
+      name: "IIMC",
+      Rank: "1448",
+      student: {
+        name: "JAKE",
+        age: "34",
+      }
+
+    },
+
+  ];
 
 
   return (
     <>
+   {
+    collageData.map((collage,index)=> (
 
- <h1>Default  Props In React JS</h1>
-<ColorClock />
+<div key={index}>
+
+<Collage collage={collage}/>
+</div>
+    ))
+}
+
 
 
     </>
