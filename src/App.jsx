@@ -1,16 +1,17 @@
 
 // import './App.css'
 import mu from './Style.module.css'
-
+import styled from "styled-components"
 
 function App() {
 
- 
 
+  const Hak = styled.h1`color: red;
+`;
 
   return (
     <>
-
+      <Hak>ok</Hak>
       <h1>inline css</h1>
 
       {/* <button onClick={dark}>Drake mode</button> <button onClick={white}>white mode</button> */}
