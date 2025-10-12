@@ -1,12 +1,12 @@
-import React, { forwardRef } from 'react'
 
-const User = (props,ref) => {
+
+const User = (props) => {
   return (
     <div>
         
-      <input ref={ref} type="text" placeholder="Enter Number" />
+      <input ref={props.ref} type="text" placeholder="Enter Number" />
    </div>
   )
 }
 
-export default forwardRef(User);
+export default User;
