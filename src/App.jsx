@@ -1,19 +1,24 @@
 
 // import './App.css'
 
-import { useState } from "react"
+import { useRef } from "react"
 import Navebar from "./Navebar"
-import { Counter } from "./Counter";
+import { useState } from "react";
+import User from "./User";
 
 
 function App() {
 
- 
-const [counter,setCounter]=useState(0);
-const inc =()=>{
-  setCounter(counter+10);
-};
+ const inputRef =useRef(null);
+const [number,setNumber]=useState(0);
 
+const operction =()=>{
+  
+  setNumber(inputRef.current.value)
+  
+
+
+}
 
  
   return (
@@ -22,9 +27,12 @@ const inc =()=>{
 
 
      <Navebar />
+     <h1>Input number :{number}</h1>
 
-     <h1>Counter {counter}</h1>
-    <Counter inc={inc} />
+    <User ref={inputRef} />
+     <button onClick={operction}>Enter</button>
+
+   
      
 
 
