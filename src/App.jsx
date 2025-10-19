@@ -17,11 +17,11 @@ const {pending} = useFormStatus();
 
 
     return (
-      <div>
-        <input type="text" placeholder="Enter ID" />
+      <div >
+        <input disabled={pending} type="text" placeholder="Enter ID" />
         <br />
         <br />
-        <input type="passWord" placeholder="Enter password" />
+        <input disabled={pending} type="passWord" placeholder="Enter password" />
         <br />
         <br />
         <button disabled={pending} >{pending?"submiting....":"Submit"}</button>
