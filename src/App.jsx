@@ -1,51 +1,50 @@
-
 // import './App.css'
 
-import Navebar from "./Navebar"
-import {useFormStatus} from "react-dom"
+import { useRef, useState } from "react";
+import Navebar from "./Navebar";
 
 function App() {
 
-  const handleSubmit = async () => {
-   await new Promise(res => setTimeout(res, 2000));
-    console.log("submit");
-  }
+  const ok = useRef();
 
+  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState('');
 
-  function CustomeForm() {
-const {pending} = useFormStatus();
+  let total = users.length;
+  let lastUser =users[users.length-1];
+  let unik =[...new Set(users)].length;
 
+  const add = () => {
+    setUsers([...users, user]);
 
-    return (
-      <div >
-        <input disabled={pending} type="text" placeholder="Enter ID" />
-        <br />
-        <br />
-        <input disabled={pending} type="passWord" placeholder="Enter password" />
-        <br />
-        <br />
-        <button disabled={pending} >{pending?"submiting....":"Submit"}</button>
-
-      </div>
-    )
-  }
-
-
+  };
   return (
     <>
-
-
       <Navebar />
 
-      <h1>UseFormStatus hooks </h1>
-      <form action={handleSubmit}>
-        <CustomeForm />
+      <br />
+      <br />
+      <h2>Total User:{total} </h2>
+      <h2>Last User: {lastUser} </h2>
+      <h2>Unique Total User: {unik} </h2>
 
-      </form>
+      <h2>okok</h2>
 
+      <input ref={ok}
+        type="text"
+        placeholder="enter name"
+        onChange={(event) => {
+         
+          setUser(event.target.value);
+        }}
+      />
+      <button  onClick={add}>Add</button>
 
+      {users.map((item, index) => (
+        <h4 key={index}>{item}</h4>
+      ))}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
