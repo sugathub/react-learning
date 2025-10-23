@@ -3,43 +3,65 @@
 
 
 
-import { useState } from "react";
+import { useActionState } from "react";
 import Navebar from "./Navebar";
 
 
 function App() {
 
-  const [data,setData]=useState([
-    'sugat','jamgade','aditya','samyak'
+  const handleSubmit = async (PreciousData, formData) => {
+    let name = formData.get('name');
+    let password = formData.get('password');
 
-  ]);
+    await new Promise(res => setTimeout(res, 2000));
 
+    if (name && password) {
+      return { message: 'Data Submitted' ,name,password}
+    } else {
+      return { error: 'Failed to Submit. Enter proper Data' ,name,password }
+    }
+  }
 
-const handal =(e)=>{
-  data[data.length-1]=e;
-  setData([...data]);
-}
+  const [data, action, pending] = useActionState(handleSubmit, undefined);
 
 
   return (
     <>
       <Navebar />
 
-      <input type="text" onChange={(e)=>{handal(e.target.value)}} placeholder="Update last element of array" />
+
+      <h1>useAction State</h1>
+
+      <form action={action}>
+        <input type="text" name="name" id="" placeholder="Enter name" />
+        <br />
+        <br />
+        <input type="password" name="password" id="" placeholder="Enetr password" />
+        <br />
+        <br />
+        <button disabled={pending}>Submit</button>
+      </form>
+      <br />
+      <br />
 
       {
-        data.map((item,index)=>( <h3 key="index" >Name :{item}</h3>)
-         
-        )
+        data?.error && <span style={{ color: 'red' }}>{data?.error}</span>
+
       }
+      {
+        data?.message && <span style={{ color: "green" }}>{data?.message}</span>
+      }
+      <br />
+      <hr />
+      <h3>name :{data?.name}</h3>
+      <br />
+      <h3>password :{data?.password}</h3>
 
 
 
 
 
 
-
-    
 
     </>
   );
