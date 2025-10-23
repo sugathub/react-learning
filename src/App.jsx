@@ -33,10 +33,10 @@ function App() {
       <h1>useAction State</h1>
 
       <form action={action}>
-        <input type="text" name="name" id="" placeholder="Enter name" />
+        <input defaultValue={data?.name} type="text" name="name" id="" placeholder="Enter name" />
         <br />
         <br />
-        <input type="password" name="password" id="" placeholder="Enetr password" />
+        <input defaultValue={data?.password} type="password" name="password" id="" placeholder="Enetr password" />
         <br />
         <br />
         <button disabled={pending}>Submit</button>
@@ -55,7 +55,7 @@ function App() {
       <hr />
       <h3>name :{data?.name}</h3>
       <br />
-      <h3>password :{data?.password}</h3>
+      <h3>password{data?.password}</h3>
 
 
 
