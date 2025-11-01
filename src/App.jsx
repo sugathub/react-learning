@@ -1,70 +1,38 @@
-// import './App.css'
+import React, { useState } from 'react'
+import Body from './Body'
+import { SubjectContext } from './ContexData'
+
+const App = () => {
 
 
+  const [data,setData]= useState("NO");
+  return (<>
+    <div style={{ padding: "30px", backgroundColor: "blue", margin: "20px" }}>
 
 
-import { useActionState } from "react";
-import Navebar from "./Navebar";
+      <SubjectContext.Provider value={data}>
+        <h3>App</h3>
+        <Body />
+
+        <select name="" id="" onChange={(event)=>{setData(event.target.value)}}>
+
+          <option value=" ">Select no</option>
+          <option value="Maths ">Maths</option>
+
+          <option value=" English">English</option>
+          <option value="Hindi">Hindi</option>
+          <option value=" Marthi">Marthi</option>
 
 
-function App() {
-
-  const handleSubmit = async (PreciousData, formData) => {
-    let name = formData.get('name');
-    let password = formData.get('password');
-
-    await new Promise(res => setTimeout(res, 2000));
-
-    if (name && password) {
-      return { message: 'Data Submitted' ,name,password}
-    } else {
-      return { error: 'Failed to Submit. Enter proper Data' ,name,password }
-    }
-  }
-
-  const [data, action, pending] = useActionState(handleSubmit, undefined);
+        </select>
 
 
-  return (
-    <>
-      <Navebar />
+      </SubjectContext.Provider>
 
 
-      <h1>useAction State</h1>
-
-      <form action={action}>
-        <input defaultValue={data?.name} type="text" name="name" id="" placeholder="Enter name" />
-        <br />
-        <br />
-        <input defaultValue={data?.password} type="password" name="password" id="" placeholder="Enetr password" />
-        <br />
-        <br />
-        <button disabled={pending}>Submit</button>
-      </form>
-      <br />
-      <br />
-
-      {
-        data?.error && <span style={{ color: 'red' }}>{data?.error}</span>
-
-      }
-      {
-        data?.message && <span style={{ color: "green" }}>{data?.message}</span>
-      }
-      <br />
-      <hr />
-      <h3>name :{data?.name}</h3>
-      <br />
-      <h3>password{data?.password}</h3>
-
-
-
-
-
-
-
-    </>
-  );
+    </div>
+  </>
+  )
 }
 
-export default App;
+export default App
