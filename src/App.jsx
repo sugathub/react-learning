@@ -1,37 +1,37 @@
-import React, { useState } from 'react'
-import Body from './Body'
-import { SubjectContext } from './ContexData'
+import { BrowserRouter, Routes, Route, Link } from "react-router"
 
 const App = () => {
 
 
-  const [data,setData]= useState("NO");
-  return (<>
-    <div style={{ padding: "30px", backgroundColor: "blue", margin: "20px" }}>
+  return (
+    <>
+      <BrowserRouter>
+
+        <Link to="/about">about</Link>
+        <Link to="/">empty</Link>
+        <Link to="/contact">contact</Link>
+        <Link to="/home">home</Link>
 
 
-      <SubjectContext.Provider value={data}>
-        <h3>App</h3>
-        <Body />
-
-        <select name="" id="" onChange={(event)=>{setData(event.target.value)}}>
-
-          <option value=" ">Select no</option>
-          <option value="Maths ">Maths</option>
-
-          <option value=" English">English</option>
-          <option value="Hindi">Hindi</option>
-          <option value=" Marthi">Marthi</option>
 
 
-        </select>
+        <Routes>
+
+          <Route path="/" element={<h1>empty</h1>} />
+          <Route path="/about" element={<h1>about</h1>} />
+          <Route path="/contact" element={<h1>contact</h1>} />
+          <Route path="/home" element={<h1>Home</h1>} />
 
 
-      </SubjectContext.Provider>
 
 
-    </div>
-  </>
+        </Routes>
+
+        
+      </BrowserRouter>
+
+
+    </>
   )
 }
 
