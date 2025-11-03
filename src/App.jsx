@@ -1,4 +1,4 @@
-import { Routes, Route, Link, } from "react-router"
+import { Routes, Route, Link, Navigate, } from "react-router"
 import { Home } from "./Home"
 import About from "./About"
 import { Login } from "./Login"
@@ -11,19 +11,25 @@ const App = () => {
 
   return (
     <>
-   <NaveBar />
-   <div  style={{    display: "flex",
-    justifyContent: "center",
-    margin: "444px"}}> <Routes >
+      <NaveBar />
+      <div style={{
+        display: "flex",
+        justifyContent: "center",
+        margin: "444px"
+      }}> <Routes >
 
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          {/* <Route path="/*" element={<h1>Page is not found </h1>} /> */}
+
+          <Route path="/*" element={<Navigate  to ="/"/>} />
+          
 
 
-      </Routes></div>
+        </Routes></div>
 
-     
+
 
 
 
