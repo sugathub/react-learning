@@ -2,7 +2,8 @@ import { Routes, Route, Link, } from "react-router"
 import { Home } from "./Home"
 import About from "./About"
 import { Login } from "./Login"
-import { Linksok } from "./Linksok"
+import { NaveBar } from "./NaveBar"
+
 
 
 const App = () => {
@@ -10,16 +11,19 @@ const App = () => {
 
   return (
     <>
-   
-<Linksok />
-      <Routes>
+   <NaveBar />
+   <div  style={{    display: "flex",
+    justifyContent: "center",
+    margin: "444px"}}> <Routes >
 
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
 
 
-      </Routes>
+      </Routes></div>
+
+     
 
 
 
