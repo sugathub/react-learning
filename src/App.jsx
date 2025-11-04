@@ -3,6 +3,10 @@ import { Home } from "./Home"
 import About from "./About"
 import { Login } from "./Login"
 import { NaveBar } from "./NaveBar"
+import { Collage } from "./Collage"
+import { Student } from "./collage/Student"
+import { Details } from "./collage/Details"
+import { Department } from "./collage/Department"
 
 
 
@@ -16,18 +20,34 @@ const App = () => {
         display: "flex",
         justifyContent: "center",
         margin: "444px"
-      }}> <Routes >
+      }}>
+        <Routes >
 
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/*" element={<h1>Page is not found </h1>} /> */}
 
-          <Route path="/*" element={<Navigate  to ="/"/>} />
-          
+          <Route path="/collage" element={<Collage />}>
+
+            <Route path="student" element={<Student />} />
+            <Route path="details" element={<Details />} />
+            <Route path="department" element={<Department />} />
 
 
-        </Routes></div>
+
+          </Route>
+
+
+          <Route path="/*" element={<h1>Page is not found </h1>} />
+
+
+
+          {/* <Route path="/*" element={<Navigate  to ="/"/>} /> */}
+
+
+
+        </Routes>
+      </div>
 
 
 

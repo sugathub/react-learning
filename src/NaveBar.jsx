@@ -14,7 +14,8 @@ export const NaveBar = () => {
                     <ul>
                         <li><Link to="/">home</Link></li>
                         <li><Link to="/about">about</Link></li>
-                        <li><Link to="/login">login</Link></li>  </ul>
+                        <li><Link to="/login">login</Link></li>  
+                        <li><Link to="/collage">Collage</Link></li> </ul>
 
                 </div>
 
