@@ -15,17 +15,22 @@ const App = () => {
 
   return (
     <>
-      <NaveBar />
-      <div style={{
-        display: "flex",
-        justifyContent: "center",
-        margin: "444px"
-      }}>
+      
+
+
+
+
+      
         <Routes >
 
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
+          <Route element={<NaveBar />}>
+          
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+          </Route>
+
+
 
           <Route path="/collage" element={<Collage />}>
 
@@ -47,7 +52,7 @@ const App = () => {
 
 
         </Routes>
-      </div>
+      
 
 
 

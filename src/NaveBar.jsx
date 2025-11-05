@@ -1,6 +1,6 @@
 import React from 'react'
 import './NaveBar.css';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 export const NaveBar = () => {
 
     return (
@@ -16,6 +16,7 @@ export const NaveBar = () => {
                         <li><Link to="/about">about</Link></li>
                         <li><Link to="/login">login</Link></li>  
                         <li><Link to="/collage">Collage</Link></li> </ul>
+                        <Outlet />
 
                 </div>
 
