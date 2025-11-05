@@ -6,7 +6,7 @@ export const Collage = () => {
         <>
            <div className='CStyle'>
            <ui>
-            <li> <NavLink to="student">Student</NavLink></li>
+            <li> <NavLink to="">Student</NavLink></li>
            <li> <NavLink to="details">Details</NavLink></li>
            <li> <NavLink to="department">Department</NavLink></li>
            

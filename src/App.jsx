@@ -34,7 +34,7 @@ const App = () => {
 
           <Route path="/collage" element={<Collage />}>
 
-            <Route path="student" element={<Student />} />
+            <Route index element={<Student />} />
             <Route path="details" element={<Details />} />
             <Route path="department" element={<Department />} />
 
