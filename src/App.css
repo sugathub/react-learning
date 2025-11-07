@@ -1,8 +1,7 @@
 .infoma {
     margin: 0;
     padding: 20px;
-    color: white;
-    background-color: black;
+   
     list-style: none;
     font-size: 20px;
     display: flex;
@@ -10,7 +9,7 @@
 }
  .infoma ui {
       display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 50rem;
-    border: 2px solid rgb(218, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
  }
