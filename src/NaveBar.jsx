@@ -13,13 +13,16 @@ export const NaveBar = () => {
                 <div className='conned'>
                     <ul>
                         <li><Link to="/">home</Link></li>
-                        <li><Link to="/about">about</Link></li>
-                        <li><Link to="/login">login</Link></li>  
-                        <li><Link to="/collage">Collage</Link></li> </ul>
-                        <Outlet />
+                        <li><Link to="/user/about">about</Link></li>
+                        <li><Link to="/user/login">login</Link></li>  
+                        <li><Link to="collage">Collage</Link></li>
+                        <li><Link to ="/user">User</Link></li>
+                         <li><Link to ="/user/list">List</Link></li> </ul>
+
+                   <Outlet />    
 
                 </div>
-
+ 
 
             </div>
 
