@@ -13,6 +13,7 @@ const [message, setMessage] = useState('');
       const URL = "http://localhost:3000/posts";
 
     const response = await fetch(URL, {
+       headers: { 'Content-Type': 'application/json' },
       method: 'Post',
       body: JSON.stringify({number,name,age}),
     });

@@ -3,6 +3,7 @@ import "./app.css"
 import { Linkes } from "./Linkes";
 import { UserList } from "./UserList";
 import { AddUser } from "./AddUser";
+import { UserEdit } from "./UserEdit";
 const App = () => {
 
 
@@ -15,7 +16,10 @@ const App = () => {
 
         <Route path="/" element={<UserList />}/>
         <Route path="/addUser" element={<AddUser />} />
+         <Route path="/edit/:id" element={<UserEdit />} />
       </Route>
+       
+
     </Routes>
     
 
