@@ -1,57 +1,13 @@
-.infoma {
-  margin: 0;
-  padding: 1px;
-
-  list-style: none;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-around;
+*{
+  padding: 10px;
+}
+.namesty{
+  border: 2px solid red;
+}
+.namesty:focus{
+  outline: 2px solid red;
 }
 
-.infoma ui {
-  display: flex;
-  justify-content: space-around;
-  width: 50rem;
-  border: 2px solid rgb(0, 0, 0);
-}
-
-.uis {
-  display: flex;
-  justify-content: center;
-}
-
-.uis ui {
-  padding: 33px;
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  width: 440px;
-}
-
-.uis ui a {
-  text-decoration: none;
-  color: limegreen;
-  font-size: 27px;
-}
-
-.tInput {
-  display: flex;
-  justify-content: center;
-  margin: 10%;
-}
-
-
- button {
-  color: #00ff5f;
-  background-color: black;
-  width: 100px;
-  border: 2px solid;
-  border-radius: 20%;
-}
-.tInput button {
-  color: #00ff5f;
-  background-color: black;
-  width: 300px;
-  border: 2px solid;
-  border-radius: 10%;
+.nameText{
+  color: red;
 }
